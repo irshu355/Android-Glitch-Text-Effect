@@ -37,7 +37,7 @@ Usage
 
 or programmatically:
 				
-		List<Integer> colors = new ArrayList<>();
+	List<Integer> colors = new ArrayList<>();
         colors.add(R.color.colorPrimaryDark);
         colors.add(R.color.colorPink);
         colors.add(R.color.colorLightBlue);
