@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     android:id="@+id/frame"
     android:layout_gravity="center"
-    android:background="#2B0059"
+    android:background="@drawable/hero"
     tools:context="com.github.irshulx.glitcheffectdemo.MainActivity">
+
+    <com.github.irshulx.glitchtext.GlitchTextEffect
+        android:layout_width="match_parent"
+        app:text="PURGE"
+        app:noise="7"
+        app:textColors="@array/glitch_colors"
+        app:textSize="27"
+        android:layout_height="match_parent">
+
+    </com.github.irshulx.glitchtext.GlitchTextEffect>
+
 </FrameLayout>

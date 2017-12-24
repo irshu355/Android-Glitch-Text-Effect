@@ -20,16 +20,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         List<Integer> colors = new ArrayList<>();
-        colors.add(R.color.colorAccent);
         colors.add(R.color.colorPrimaryDark);
-        colors.add(R.color.colorPrimary);
+        colors.add(R.color.color_pink);
+        colors.add(R.color.color_light_blue);
+        colors.add(R.color.color_front);
 //        AnimTextView textView = new AnimTextView(this);
 //        setContentView(textView);
         setContentView(R.layout.activity_main);
-        FrameLayout layout =(FrameLayout)findViewById(R.id.frame);
-        GlitchTextEffect effect = new GlitchTextEffect(this,colors);
-        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        params.gravity = Gravity.CENTER;
-        layout.addView(effect);
+        FrameLayout layout = findViewById(R.id.frame);
+//        GlitchTextEffect effect = new GlitchTextEffect(this,colors,"DISTRESS");
+//        effect.setTextSize(60);
+//        effect.setNoise(6);
+//        effect.start();
+//        layout.addView(effect);
     }
 }
