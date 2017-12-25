@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="glitch_colors">
-        <item>#03fcfc</item>
+        <item>#570aa9</item>
         <item>#fc00fc</item>
+        <item>#03fcfc</item>
         <item>#ffffff</item>
     </string-array>
 </resources>

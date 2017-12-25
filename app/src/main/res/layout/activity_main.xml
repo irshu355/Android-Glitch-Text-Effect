@@ -6,14 +6,13 @@
     android:layout_height="match_parent"
     android:id="@+id/frame"
     android:layout_gravity="center"
-    android:background="@drawable/hero"
-    tools:context="com.github.irshulx.glitcheffectdemo.MainActivity">
+    android:background="#2B0059">
 
     <com.github.irshulx.glitchtext.GlitchTextEffect
         android:layout_width="match_parent"
-        app:text="HELLO"
-        app:noise="16"
-        app:speed="300"
+        app:text="ARCADE"
+        app:noise="6"
+        app:speed="70"
         app:textColors="@array/glitch_colors"
         app:textSize="70"
         android:layout_height="match_parent" />

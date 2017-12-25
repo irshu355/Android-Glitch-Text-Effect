@@ -19,15 +19,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        List<Integer> colors = new ArrayList<>();
-        colors.add(R.color.colorPrimaryDark);
-        colors.add(R.color.color_pink);
-        colors.add(R.color.color_light_blue);
-        colors.add(R.color.color_front);
-//        AnimTextView textView = new AnimTextView(this);
-//        setContentView(textView);
         setContentView(R.layout.activity_main);
-        FrameLayout layout = findViewById(R.id.frame);
+//        List<Integer> colors = new ArrayList<>();
+//        colors.add(R.color.colorPrimaryDark);
+//        colors.add(R.color.color_pink);
+//        colors.add(R.color.color_light_blue);
+//        colors.add(R.color.color_front);
+        //FrameLayout layout = findViewById(R.id.frame);
 //        GlitchTextEffect effect = new GlitchTextEffect(this,colors,"DISTRESS");
 //        effect.setTextSize(60);
 //        effect.setNoise(6);
