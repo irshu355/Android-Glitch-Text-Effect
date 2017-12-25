@@ -6,7 +6,7 @@ An Android library to add a glitch effect into a string. This project was inspir
 
 Demo screen below was captured at a limited 25fps 
 
-![captured at 25fps](https://github.com/irshuLx/Android-Glitch-Text-Effect/raw/master/screens/ezgif-3.gif)
+![captured at 25fps](https://github.com/irshuLx/Android-Glitch-Text-Effect/raw/master/screens/ezgif-3.gif)&nbsp; &nbsp; ![captured at 25fps](https://raw.githubusercontent.com/irshuLx/Android-Glitch-Text-Effect/master/screens/ezgif.gif)
 
 
 Download
