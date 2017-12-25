@@ -1,3 +1,5 @@
+[ ![Download](https://api.bintray.com/packages/irshu/maven/glitch-text-effect/images/download.svg) ](https://bintray.com/irshu/maven/glitch-text-effect/_latestVersion)
+
 # Android-Glitch-Text-Effect
 
 An Android library to add a glitch effect into a string. This project was inspired by the codepen, https://codepen.io/ihatetomatoes/pen/8a16e11e6d6206f5eb1ed7a37fbbe1dc.
@@ -11,17 +13,19 @@ Download
 ------------
 gradle:
 
-    compile 'com.github.irshulx:glitch-text-effect:1.0.0'
+    compile 'com.github.irshulx:glitch-text-effect:1.0.1'
 
 or maven:
 
     <dependency>
       <groupId>com.github.irshulx</groupId>
       <artifactId>glitch-text-effect</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.1</version>
       <type>pom</type>
     </dependency>
 
+
+A gist of this library is available at https://gist.github.com/irshuLx/138c1dc0af5262e3ca0c5f5db014d7ef
 
 Usage
 --------------
@@ -51,6 +55,10 @@ or programmatically:
         effect.setNoise(6); //the noise quotient of the effect
         effect.start();     // required to call for programmatic initiation
         layout.addView(effect);
+
+The logic is to stack textviews on a FrameLayout and animate their positions in opposite directions. The no. of textviews added is proportional to the number of colors in the array.
+
+![enter image description here](https://raw.githubusercontent.com/irshuLx/Android-Glitch-Text-Effect/master/screens/img_css-glitch-effect-animation.png)
 
 API
 --------------
