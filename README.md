@@ -2,6 +2,10 @@
 
 An Android library to add a glitch effect into a string. This project was inspired by the codepen, https://codepen.io/ihatetomatoes/pen/8a16e11e6d6206f5eb1ed7a37fbbe1dc.
 
+Demo screen below was captured at a limited 25fps 
+
+![captured at 25fps](https://github.com/irshuLx/Android-Glitch-Text-Effect/raw/master/screens/ezgif-3.gif)
+
 
 Download
 ------------
@@ -17,9 +21,6 @@ or maven:
       <version>1.0.0</version>
       <type>pom</type>
     </dependency>
-
-Demo
---------------
 
 
 Usage
