@@ -23,6 +23,8 @@ or maven:
     </dependency>
 
 
+A gist of this library is available at https://gist.github.com/irshuLx/138c1dc0af5262e3ca0c5f5db014d7ef
+
 Usage
 --------------
 
