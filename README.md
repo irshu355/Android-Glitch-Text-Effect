@@ -11,14 +11,14 @@ Download
 ------------
 gradle:
 
-    compile 'com.github.irshulx:glitch-text-effect:1.0.0'
+    compile 'com.github.irshulx:glitch-text-effect:1.0.1'
 
 or maven:
 
     <dependency>
       <groupId>com.github.irshulx</groupId>
       <artifactId>glitch-text-effect</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.1</version>
       <type>pom</type>
     </dependency>
 
