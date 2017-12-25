@@ -56,6 +56,10 @@ or programmatically:
         effect.start();     // required to call for programmatic initiation
         layout.addView(effect);
 
+The logic is to stack textviews on a FrameLayout and animate their positions in opposite directions. The no. of textviews added is proportional to the number of colors in the array.
+
+![enter image description here](https://raw.githubusercontent.com/irshuLx/Android-Glitch-Text-Effect/master/screens/img_css-glitch-effect-animation.png)
+
 API
 --------------
 
