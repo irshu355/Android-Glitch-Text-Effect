@@ -6,5 +6,6 @@
         <attr name="textColors" format="reference"/>
         <attr name="noise" format="integer" />
         <attr name="fontLocation" format="string" />
+        <attr name="speed" format="integer" />
     </declare-styleable>
 </resources>

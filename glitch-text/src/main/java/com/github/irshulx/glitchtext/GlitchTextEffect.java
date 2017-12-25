@@ -15,9 +15,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -27,10 +25,10 @@ import java.util.List;
 public class GlitchTextEffect extends FrameLayout{
     private List<Integer> colors = new ArrayList<>();
     private int noise=10;
-    private String text = "HELLO";
+    private String text;
     List<TextView> textViews = new ArrayList<>();
     private AnimationSet animationSet;
-    private long duration=70;
+    private int speed =70;
     private boolean reverse =false;
     private int textSize = 50;
     private String fontFile="fonts/Poppins-Black.ttf";
@@ -50,13 +48,10 @@ public class GlitchTextEffect extends FrameLayout{
         loadStateFromAttrs(attrs);
     }
 
-    public GlitchTextEffect(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-    }
-
     private void loadStateFromAttrs(AttributeSet attributeSet) {
         if (attributeSet == null) {
-            return; // quick exit
+            throw new IllegalArgumentException(
+                    "Configurations not found");
         }
 
         TypedArray a = null;
@@ -64,13 +59,17 @@ public class GlitchTextEffect extends FrameLayout{
             a = getContext().obtainStyledAttributes(attributeSet, R.styleable.GlitchTextEffect);
             this.noise = a.getInteger(R.styleable.GlitchTextEffect_noise,this.noise);
             this.textSize = a.getInteger(R.styleable.GlitchTextEffect_textSize,this.textSize);
+            this.speed = a.getInteger(R.styleable.GlitchTextEffect_speed,this.speed);
             String fontFile = a.getString(R.styleable.GlitchTextEffect_fontLocation);
             this.text = a.getString(R.styleable.GlitchTextEffect_text);
-
+            if(TextUtils.isEmpty(this.text)){
+                throw new IllegalArgumentException(
+                        "Text not specified, please include app:text attribute");
+            }
             int colorsResId = a.getResourceId(R.styleable.GlitchTextEffect_textColors, 0);
             if (colorsResId == 0) {
                 throw new IllegalArgumentException(
-                        "IntegerListPreference: error - valueList is not specified");
+                        "IntegerListPreference: error - colors not specified, please include app:textColors");
             }
             TypedArray ta = getContext().getResources().obtainTypedArray(R.array.glitch_colors);
             for (int i = 0; i < ta.length(); i++) {
@@ -79,11 +78,6 @@ public class GlitchTextEffect extends FrameLayout{
             }
 
             this.fontFile = TextUtils.isEmpty(fontFile)?this.fontFile:fontFile;
-
-            if(TextUtils.isEmpty(this.text)){
-                throw new IllegalArgumentException(
-                        "Text is required");
-            }
 
             start();
 
@@ -110,6 +104,9 @@ public class GlitchTextEffect extends FrameLayout{
         this.noise = noise;
     }
 
+    public void setSpeed(int speed){
+        this.speed = speed;
+    }
 
 
     private void init() {
@@ -138,28 +135,28 @@ public class GlitchTextEffect extends FrameLayout{
         TranslateAnimation trans = new TranslateAnimation(0, 0,
                 TranslateAnimation.ABSOLUTE, reverse?1*noise: -1*noise , 0, 0,
                 TranslateAnimation.ABSOLUTE, reverse?-1*noise : noise);
-        trans.setDuration(duration);
+        trans.setDuration(this.speed);
 
         TranslateAnimation trans2 = new TranslateAnimation(0, 0,
                 TranslateAnimation.ABSOLUTE,reverse?-1*noise: noise, 0, 0,
                 TranslateAnimation.ABSOLUTE, reverse?noise*2:-1*noise*2);
-        trans2.setStartOffset(duration);
-        trans2.setDuration(duration);
+        trans2.setStartOffset(this.speed);
+        trans2.setDuration(this.speed);
 
 
 
         TranslateAnimation trans3 = new TranslateAnimation(0, 0,
                 TranslateAnimation.ABSOLUTE,reverse?-1*noise: noise, 0, 0,
                 TranslateAnimation.ABSOLUTE,reverse?-2*noise: noise*2);
-        trans3.setStartOffset(2*duration);
-        trans3.setDuration(duration);
+        trans3.setStartOffset(2* this.speed);
+        trans3.setDuration(this.speed);
 
 
         TranslateAnimation trans4 = new TranslateAnimation(0, 0,
                 TranslateAnimation.ABSOLUTE,reverse?noise: -1*noise, 0, 0,
                 TranslateAnimation.ABSOLUTE,reverse?noise*1: -1*noise*1);
-        trans4.setStartOffset(3*duration);
-        trans4.setDuration(duration);
+        trans4.setStartOffset(3* this.speed);
+        trans4.setDuration(this.speed);
 
 
         // add new animations to the set
