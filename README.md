@@ -36,7 +36,7 @@ Usage
         app:noise="7"
         app:textColors="@array/glitch_colors"
         app:textSize="27"
-       	app:speed="70"
+	app:speed="70"
         android:layout_height="match_parent" />
 
 	        
