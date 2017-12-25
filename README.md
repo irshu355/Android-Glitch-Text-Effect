@@ -32,6 +32,7 @@ Usage
         app:noise="7"
         app:textColors="@array/glitch_colors"
         app:textSize="27"
+	app:speed="70"
         android:layout_height="match_parent" />
 
 	        
@@ -46,6 +47,7 @@ or programmatically:
         
         GlitchTextEffect effect = new GlitchTextEffect(this,colors,"PURGE");
         effect.setTextSize(60);
+	effect.setSpeed(70); //duration of a single cycle animation
         effect.setNoise(6); //the noise quotient of the effect
         effect.start();     // required to call for programmatic initiation
         layout.addView(effect);
