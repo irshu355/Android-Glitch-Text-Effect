@@ -1,5 +1,23 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'glitch-text-effect'
+    publishedGroupId = 'com.github.irshulx'
+    libraryName = 'glitch-text-effect'
+    artifact = 'glitch-text-effect'
+    libraryDescription = 'A library to add glitch effect to a text string'
+    siteUrl = 'https://github.com/irshuLx/Android-Glitch-Text-Effect'
+    gitUrl = 'https://github.com/irshuLx/Android-Glitch-Text-Effect.git'
+    libraryVersion = '1.0.0'
+    developerId = 'irshuLx'
+    developerName = 'Irshu'
+    developerEmail = 'irshu@outlook.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 26
 
@@ -32,3 +50,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 }
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

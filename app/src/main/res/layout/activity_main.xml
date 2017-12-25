@@ -11,12 +11,10 @@
 
     <com.github.irshulx.glitchtext.GlitchTextEffect
         android:layout_width="match_parent"
-        app:text="PURGE"
+        app:text="PURGED"
         app:noise="7"
         app:textColors="@array/glitch_colors"
-        app:textSize="27"
-        android:layout_height="match_parent">
-
-    </com.github.irshulx.glitchtext.GlitchTextEffect>
+        app:textSize="50"
+        android:layout_height="match_parent" />
 
 </FrameLayout>
